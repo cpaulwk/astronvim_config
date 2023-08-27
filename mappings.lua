@@ -32,7 +32,25 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    -- Quick fixes
+    ["n"] = { "nzz", desc = "Center next search" },
+    ["N"] = { "Nzz", desc = "Center next search" },
+    ["<C-d>"] = { "<C-d>zz", desc = "Center go down 1/2 page" },
+    ["<C-u>"] = { "<C-u>zz", desc = "Center go up 1/2 page" },
+    ["<CR>"] = { "<Cmd>b#<CR>", desc = "Switch buffer" },
+    ["<C-j>"] = { "i<CR><Esc>", desc = "Move text after cursor down 1 line" },
+    ["<C-l>"] = { "<Cmd>bn<CR>", desc = "Go to next buffer" },
+    ["<C-h>"] = { "<Cmd>bp<CR>", desc = "Go to previous buffer" },
+    ["<C-k>"] = { "<Cmd>bn<bar>bd#<CR>", desc = "Quit current buffer's file" },
+
+    -- Fugitive
+    ["<leader>G"] = { "<Cmd>Git<CR>", desc = "Use fugitive" },
+
+    -- LazyGit
+    -- ["<leader>gg"] = { "<Cmd>lazygit<CR>", desc = "Use lazygit" },
   },
+
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
